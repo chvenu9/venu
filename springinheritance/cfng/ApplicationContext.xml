@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="base" class="com.pavana.model.Student">
+<property name="course" value="Mech"/>
+</bean>
+<bean name="st" class="com.pavana.model.Student" parent="base"
+ p:subjects="fluidmechanics">
+
+<!-- <property name="course" value="Mech"/> -->
+ <!-- <property name="subjects" value="mechanics"/> -->
+</bean>
+<bean name="st1" class="com.pavana.model.Student" parent="base">
+<!-- <property name="course" value="Mech"/> -->
+<property name="subjects" value="SOM"/>
+
+</bean>
+</beans>
